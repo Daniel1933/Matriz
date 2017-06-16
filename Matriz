@@ -1,0 +1,72 @@
+#include <stdio.h>
+int main()
+{
+    int matrizA[4][4];
+    int matrizB[4][4];
+    int matrizSoma[4][4];
+    int matrizMult[4][4];
+    int linha, coluna;
+
+    printf("\nOla, meu nome é Daniel de Souza Ferreira Bastos  e minha matrícula é 0050014460\n");
+		printf("\nEntre com a primeira matriz A de 4 linhas e 4 colunas:\n\n");
+    
+    for(linha = 0 ; linha < 4 ; linha++)
+        for(coluna = 0 ; coluna < 4 ; coluna++)
+        {		
+            printf("Matriz A - Entre com a linha [%d] coluna [%d]: ", linha+1, coluna+1);
+            scanf("%d", &matrizA[linha][coluna]);
+        }
+printf("\n\n");
+printf("\nEntre com a segunda matriz B de 4 linhas e 4 colunas:\n\n");    
+    for(linha = 0 ; linha < 4 ; linha++)
+        for(coluna = 0 ; coluna < 4 ; coluna++)
+        {
+            printf("Matriz B - Entre com a linha [%d] coluna [%d]: ", linha+1, coluna+1);
+            scanf("%d", &matrizB[linha][coluna]);
+        }
+        
+        
+      for( linha=0; linha<4; linha++ )
+        for( coluna=0; coluna<4; coluna++ )
+          matrizSoma[linha][coluna] = matrizA[linha][coluna] + matrizB[linha][coluna];
+                 
+                 
+      for( linha=0; linha<4; linha++ )
+        for( coluna=0; coluna<4; coluna++ )
+          matrizMult[linha][coluna] = matrizA[linha][coluna] * matrizB[linha][coluna];
+          
+                 
+          
+printf("A matriz soma é:\n");      
+      for( linha=0; linha<4; linha++ )
+       {
+         for( coluna=0; coluna<4; coluna++ )
+				 {
+           printf("%d\t", matrizSoma[linha][coluna] );
+				 }   
+					 printf("\n");
+       }
+
+      printf("\n\n");           
+      
+   printf("\nDiagonal secundária da matriz A: \n");
+printf("0\t0\t0\t%d\n", matrizA[0][3]);
+printf("0\t0\t%d\t0\n", matrizA[1][2]);
+printf("0\t%d\t0\t0\n", matrizA[2][1]);
+printf("%d\t0\t0\t0\n", matrizA[3][0]);
+    
+       
+      
+      printf("\nA matriz multiplicação é:\n");      
+      for( linha=0; linha<4; linha++ )
+       {
+         for( coluna=0; coluna<4; coluna++ )
+				 {
+           printf("%d\t", matrizMult[linha][coluna] );
+				 }
+					 printf("\n");
+				 
+			 }	 
+	printf("\nA minha maior dificuldade foi a organização visual e teórica no uso das fórmulas, pois qualquer erro comprometeria  o desenvolvimento do programa. Antes de enviá-lo usei o Codeanywhere por diversas vezes para comprovar se estava tudo correto.\n\n");
+  return 0;
+}
